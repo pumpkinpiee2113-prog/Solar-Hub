@@ -1,1 +1,2948 @@
+--[=[
+ ███████╗ ██████╗ ██╗      █████╗ ██████╗ 
+ ██╔════╝██╔═══██╗██║     ██╔══██╗██╔══██╗
+ ███████╗██║   ██║██║     ███████║██████╔╝
+ ╚════██║██║   ██║██║     ██╔══██║██╔══██╗
+ ███████║╚██████╔╝███████╗██║  ██║██║  ██║
+ ╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
 
+ ██╗  ██╗██╗   ██╗██████╗ 
+ ██║  ██║██║   ██║██╔══██╗
+ ███████║██║   ██║██████╔╝
+ ██╔══██║██║   ██║██╔══██╗
+ ██║  ██║╚██████╔╝██████╔╝
+ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝
+]=]
+
+-- Instances: 128 | Scripts: 22 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Solar Hub
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Solar Hub]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.Solar Hub.MainFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["2"]["Size"] = UDim2.new(0, 649, 0, 500);
+G2L["2"]["Position"] = UDim2.new(0, 364, 0, 175);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UIDragDetector
+G2L["3"] = Instance.new("UIDragDetector", G2L["2"]);
+
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["4"]["Size"] = UDim2.new(0, 648, 0, 30);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Name"] = [[TopBar]];
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.TextLabel
+G2L["5"] = Instance.new("TextLabel", G2L["4"]);
+G2L["5"]["TextWrapped"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextSize"] = 20;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Size"] = UDim2.new(0, 230, 0, 25);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Solar Hub v.021]];
+G2L["5"]["Position"] = UDim2.new(-0.00078, 0, 0.07895, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.TopBar
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["6"]["Size"] = UDim2.new(0, 648, 0, 2);
+G2L["6"]["Position"] = UDim2.new(0, 0, 0.92105, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[TopBar]];
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close
+G2L["7"] = Instance.new("TextButton", G2L["4"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 83, 49);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/HighwayGothic.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 32, 0, 22);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[❌]];
+G2L["7"]["Name"] = [[close]];
+G2L["7"]["Position"] = UDim2.new(0.94167, 0, 0.06667, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.LocalScript
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["7"]);
+G2L["9"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close
+G2L["a"] = Instance.new("TextButton", G2L["4"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0, 32, 0, 22);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Text"] = [[-]];
+G2L["a"]["Name"] = [[close]];
+G2L["a"]["Position"] = UDim2.new(0.87746, 0, 0.06667, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["a"]);
+
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["a"]);
+G2L["c"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages
+G2L["d"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["d"]["Active"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+-- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["d"]["TopImage"] = [[]];
+G2L["d"]["Name"] = [[Pages]];
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["d"]["BottomImage"] = [[]];
+G2L["d"]["Size"] = UDim2.new(0, 162, 0, 447);
+G2L["d"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Position"] = UDim2.new(0.00963, 0, 0.10526, 0);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.logs
+G2L["e"] = Instance.new("TextButton", G2L["d"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 21;
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0, 121, 0, 37);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[Updates]];
+G2L["e"]["Name"] = [[logs]];
+G2L["e"]["Position"] = UDim2.new(0.06954, 0, 0.003, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.logs.UICorner
+G2L["f"] = Instance.new("UICorner", G2L["e"]);
+G2L["f"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.logs.enablepage
+G2L["10"] = Instance.new("LocalScript", G2L["e"]);
+G2L["10"]["Name"] = [[enablepage]];
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.UIGridLayout
+G2L["11"] = Instance.new("UIGridLayout", G2L["d"]);
+G2L["11"]["CellSize"] = UDim2.new(0, 145, 0, 35);
+G2L["11"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["11"]["CellPadding"] = UDim2.new(0, 10, 0, 10);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.universal
+G2L["12"] = Instance.new("TextButton", G2L["d"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 21;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 121, 0, 37);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[   Universal]];
+G2L["12"]["Name"] = [[universal]];
+G2L["12"]["Position"] = UDim2.new(0.06954, 0, 0.003, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.universal.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+G2L["13"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.universal.enablepage
+G2L["14"] = Instance.new("LocalScript", G2L["12"]);
+G2L["14"]["Name"] = [[enablepage]];
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.universal.ImageLabel
+G2L["15"] = Instance.new("ImageLabel", G2L["12"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Image"] = [[rbxassetid://93730749759563]];
+G2L["15"]["Size"] = UDim2.new(0, 27, 0, 27);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Position"] = UDim2.new(0.06207, 0, 0.11429, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.MM2
+G2L["16"] = Instance.new("TextButton", G2L["d"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 21;
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["Size"] = UDim2.new(0, 121, 0, 37);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[   MM2]];
+G2L["16"]["Name"] = [[MM2]];
+G2L["16"]["Position"] = UDim2.new(0.06954, 0, 0.003, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.MM2.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
+G2L["17"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.MM2.ImageLabel
+G2L["18"] = Instance.new("ImageLabel", G2L["16"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxassetid://12684121161]];
+G2L["18"]["Size"] = UDim2.new(0, 30, 0, 30);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["Position"] = UDim2.new(0.06207, 0, 0.11429, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.Pages.MM2.enablepage
+G2L["19"] = Instance.new("LocalScript", G2L["16"]);
+G2L["19"]["Name"] = [[enablepage]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage
+G2L["1a"] = Instance.new("Frame", G2L["2"]);
+G2L["1a"]["Visible"] = false;
+G2L["1a"]["Interactable"] = false;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["1a"]["Size"] = UDim2.new(0, 464, 0, 468);
+G2L["1a"]["Position"] = UDim2.new(0.28229, 0, 0.06526, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Name"] = [[UpdatePage]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You
+G2L["1b"] = Instance.new("Frame", G2L["1a"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["1b"]["Size"] = UDim2.new(0, 375, 0, 171);
+G2L["1b"]["Position"] = UDim2.new(0.08054, 0, 0.04487, 0);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Name"] = [[You]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.UIGradient
+G2L["1c"] = Instance.new("UIGradient", G2L["1b"]);
+G2L["1c"]["Rotation"] = 90;
+G2L["1c"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(163, 163, 163))};
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1b"]);
+G2L["1d"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.You
+G2L["1e"] = Instance.new("ImageLabel", G2L["1b"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["1e"]["Size"] = UDim2.new(0, 120, 0, 120);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Name"] = [[You]];
+G2L["1e"]["Position"] = UDim2.new(0.06933, 0, 0.1462, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.You.LocalScript
+G2L["1f"] = Instance.new("LocalScript", G2L["1e"]);
+
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.TextLabel
+G2L["20"] = Instance.new("TextLabel", G2L["1b"]);
+G2L["20"]["TextStrokeTransparency"] = 0;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["TextSize"] = 28;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["Size"] = UDim2.new(0, 200, 0, 121);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Position"] = UDim2.new(0.424, 0, 0.14035, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.TextLabel.LocalScript
+G2L["21"] = Instance.new("LocalScript", G2L["20"]);
+
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.TextLabel
+G2L["22"] = Instance.new("TextLabel", G2L["1a"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["TextStrokeTransparency"] = 0;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 24;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["Size"] = UDim2.new(0, 375, 0, 232);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[- 2021 Update, No Context to be Provided]];
+G2L["22"]["Position"] = UDim2.new(0.08054, 0, 0.44658, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.PageShown
+G2L["23"] = Instance.new("BoolValue", G2L["1a"]);
+G2L["23"]["Name"] = [[PageShown]];
+G2L["23"]["Value"] = true;
+
+
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.valuecheck
+G2L["24"] = Instance.new("LocalScript", G2L["1a"]);
+G2L["24"]["Name"] = [[valuecheck]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page
+G2L["25"] = Instance.new("Frame", G2L["2"]);
+G2L["25"]["Visible"] = false;
+G2L["25"]["Interactable"] = false;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["25"]["Size"] = UDim2.new(0, 465, 0, 468);
+G2L["25"]["Position"] = UDim2.new(0.28229, 0, 0.06526, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Name"] = [[MM2Page]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll
+G2L["26"] = Instance.new("ScrollingFrame", G2L["25"]);
+G2L["26"]["Active"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+-- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["26"]["TopImage"] = [[]];
+G2L["26"]["Name"] = [[scroll]];
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["26"]["BottomImage"] = [[]];
+G2L["26"]["Size"] = UDim2.new(0, 429, 0, 447);
+G2L["26"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Position"] = UDim2.new(0, 0, 0.04487, 0);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP
+G2L["27"] = Instance.new("Frame", G2L["26"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 177, 18);
+G2L["27"]["Size"] = UDim2.new(0, 377, 0, 35);
+G2L["27"]["Position"] = UDim2.new(0.06643, 0, 0, 0);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Name"] = [[Murderer ESP]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton
+G2L["28"] = Instance.new("Frame", G2L["27"]);
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["28"]["Size"] = UDim2.new(0.1396, 0, -0.81229, 0);
+G2L["28"]["Position"] = UDim2.new(0.01459, 40, 0.5, 0);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["28"]["Name"] = [[SwitchButton]];
+G2L["28"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.MasterScript
+G2L["29"] = Instance.new("LocalScript", G2L["28"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["29"]["Sandboxed"] = true;
+G2L["29"]["Name"] = [[MasterScript]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar
+G2L["2a"] = Instance.new("Frame", G2L["28"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47);
+G2L["2a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["2a"]["Name"] = [[Bar]];
+G2L["2a"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.UICorner
+G2L["2b"] = Instance.new("UICorner", G2L["2a"]);
+G2L["2b"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.Circle
+G2L["2c"] = Instance.new("Frame", G2L["2a"]);
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 93, 93);
+G2L["2c"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["2c"]["Size"] = UDim2.new(0.6, 0, 1.25, 0);
+G2L["2c"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2c"]["Name"] = [[Circle]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.Circle.UIStroke
+G2L["2d"] = Instance.new("UIStroke", G2L["2c"]);
+G2L["2d"]["Transparency"] = 0.25;
+G2L["2d"]["Thickness"] = 2;
+G2L["2d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.Circle.UIStroke.UIGradient
+G2L["2e"] = Instance.new("UIGradient", G2L["2d"]);
+G2L["2e"]["Rotation"] = 90;
+G2L["2e"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(0.620, 1),NumberSequenceKeypoint.new(1.000, 0.69375)};
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.Circle.Button
+G2L["2f"] = Instance.new("ImageButton", G2L["2c"]);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["ZIndex"] = 2;
+G2L["2f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2f"]["Name"] = [[Button]];
+G2L["2f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.Circle.UICorner
+G2L["30"] = Instance.new("UICorner", G2L["2c"]);
+G2L["30"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.Bar.UIAspectRatioConstraint
+G2L["31"] = Instance.new("UIAspectRatioConstraint", G2L["2a"]);
+G2L["31"]["AspectRatio"] = 2;
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["27"]);
+G2L["32"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.UIGradient
+G2L["33"] = Instance.new("UIGradient", G2L["27"]);
+G2L["33"]["Rotation"] = 90;
+G2L["33"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(163, 163, 163))};
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.TextLabel
+G2L["34"] = Instance.new("TextLabel", G2L["27"]);
+G2L["34"]["TextStrokeTransparency"] = 0;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["TextSize"] = 22;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["BackgroundTransparency"] = 1;
+G2L["34"]["Size"] = UDim2.new(0, 200, 0, 35);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Text"] = [[Murderer ESP]];
+G2L["34"]["Position"] = UDim2.new(0.25199, 0, 0, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.PageShown
+G2L["35"] = Instance.new("BoolValue", G2L["25"]);
+G2L["35"]["Name"] = [[PageShown]];
+
+
+-- StarterGui.Solar Hub.MainFrame.MM2Page.valuecheck
+G2L["36"] = Instance.new("LocalScript", G2L["25"]);
+G2L["36"]["Name"] = [[valuecheck]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage
+G2L["37"] = Instance.new("Frame", G2L["2"]);
+G2L["37"]["Interactable"] = false;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["37"]["Size"] = UDim2.new(0, 465, 0, 467);
+G2L["37"]["Position"] = UDim2.new(0.28229, 0, 0.06526, 0);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Name"] = [[UniversalPage]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll
+G2L["38"] = Instance.new("ScrollingFrame", G2L["37"]);
+G2L["38"]["Active"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+-- [ERROR] cannot convert TopImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["38"]["TopImage"] = [[]];
+G2L["38"]["Name"] = [[scroll]];
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert BottomImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["38"]["BottomImage"] = [[]];
+G2L["38"]["Size"] = UDim2.new(0, 465, 0, 447);
+G2L["38"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Position"] = UDim2.new(0, 0, 0.04487, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.UIListLayout
+G2L["39"] = Instance.new("UIListLayout", G2L["38"]);
+G2L["39"]["Padding"] = UDim.new(0, 6);
+G2L["39"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ImageLabel
+G2L["3a"] = Instance.new("ImageLabel", G2L["38"]);
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["ImageColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["3a"]["Image"] = [[rbxassetid://4581715784]];
+G2L["3a"]["Size"] = UDim2.new(0, 448, 0, 3);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Position"] = UDim2.new(0, 0, 0.22377, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP
+G2L["3b"] = Instance.new("Frame", G2L["38"]);
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["3b"]["Size"] = UDim2.new(0, 448, 0, 39);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Name"] = [[ESP]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton
+G2L["3c"] = Instance.new("Frame", G2L["3b"]);
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3c"]["Size"] = UDim2.new(0.1396, 0, -0.81229, 0);
+G2L["3c"]["Position"] = UDim2.new(0.01459, 40, 0.5, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["3c"]["Name"] = [[SwitchButton]];
+G2L["3c"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar
+G2L["3d"] = Instance.new("Frame", G2L["3c"]);
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47);
+G2L["3d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["3d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["3d"]["Name"] = [[Bar]];
+G2L["3d"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.UICorner
+G2L["3e"] = Instance.new("UICorner", G2L["3d"]);
+G2L["3e"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle
+G2L["3f"] = Instance.new("Frame", G2L["3d"]);
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["3f"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["3f"]["Size"] = UDim2.new(0.6, 0, 1, 0);
+G2L["3f"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["3f"]["Name"] = [[Circle]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.UIStroke
+G2L["40"] = Instance.new("UIStroke", G2L["3f"]);
+G2L["40"]["Transparency"] = 0.25;
+G2L["40"]["Thickness"] = 2;
+G2L["40"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.UIStroke.UIGradient
+G2L["41"] = Instance.new("UIGradient", G2L["40"]);
+G2L["41"]["Rotation"] = 90;
+G2L["41"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(0.620, 1),NumberSequenceKeypoint.new(1.000, 0.69375)};
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.Button
+G2L["42"] = Instance.new("ImageButton", G2L["3f"]);
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["ZIndex"] = 2;
+G2L["42"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["42"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["42"]["Name"] = [[Button]];
+G2L["42"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.Button.esp
+G2L["43"] = Instance.new("LocalScript", G2L["42"]);
+G2L["43"]["Name"] = [[esp]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.UICorner
+G2L["44"] = Instance.new("UICorner", G2L["3f"]);
+G2L["44"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.UIAspectRatioConstraint
+G2L["45"] = Instance.new("UIAspectRatioConstraint", G2L["3d"]);
+G2L["45"]["AspectRatio"] = 2;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.MasterScript
+G2L["46"] = Instance.new("LocalScript", G2L["3c"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["46"]["Sandboxed"] = true;
+G2L["46"]["Name"] = [[MasterScript]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.UICorner
+G2L["47"] = Instance.new("UICorner", G2L["3b"]);
+G2L["47"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.TextLabel
+G2L["48"] = Instance.new("TextLabel", G2L["3b"]);
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["TextSize"] = 22;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Size"] = UDim2.new(0, 222, 0, 28);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[ESP]];
+G2L["48"]["Position"] = UDim2.new(0.26985, 0, 0.13636, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers
+G2L["49"] = Instance.new("Frame", G2L["38"]);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["49"]["Size"] = UDim2.new(0, 448, 0, 39);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Name"] = [[Tracers]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton
+G2L["4a"] = Instance.new("Frame", G2L["49"]);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4a"]["Size"] = UDim2.new(0.1396, 0, -0.81229, 0);
+G2L["4a"]["Position"] = UDim2.new(0.01459, 40, 0.5, 0);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["4a"]["Name"] = [[SwitchButton]];
+G2L["4a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar
+G2L["4b"] = Instance.new("Frame", G2L["4a"]);
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47);
+G2L["4b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4b"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["4b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["4b"]["Name"] = [[Bar]];
+G2L["4b"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.UICorner
+G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
+G2L["4c"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle
+G2L["4d"] = Instance.new("Frame", G2L["4b"]);
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["4d"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["4d"]["Size"] = UDim2.new(0.6, 0, 1, 0);
+G2L["4d"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["4d"]["Name"] = [[Circle]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.UIStroke
+G2L["4e"] = Instance.new("UIStroke", G2L["4d"]);
+G2L["4e"]["Transparency"] = 0.25;
+G2L["4e"]["Thickness"] = 2;
+G2L["4e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.UIStroke.UIGradient
+G2L["4f"] = Instance.new("UIGradient", G2L["4e"]);
+G2L["4f"]["Rotation"] = 90;
+G2L["4f"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(0.620, 1),NumberSequenceKeypoint.new(1.000, 0.69375)};
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.Button
+G2L["50"] = Instance.new("ImageButton", G2L["4d"]);
+G2L["50"]["BackgroundTransparency"] = 1;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["ZIndex"] = 2;
+G2L["50"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["50"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["50"]["Name"] = [[Button]];
+G2L["50"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.Button.esp
+G2L["51"] = Instance.new("LocalScript", G2L["50"]);
+G2L["51"]["Name"] = [[esp]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.UICorner
+G2L["52"] = Instance.new("UICorner", G2L["4d"]);
+G2L["52"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.UIAspectRatioConstraint
+G2L["53"] = Instance.new("UIAspectRatioConstraint", G2L["4b"]);
+G2L["53"]["AspectRatio"] = 2;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.MasterScript
+G2L["54"] = Instance.new("LocalScript", G2L["4a"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["54"]["Sandboxed"] = true;
+G2L["54"]["Name"] = [[MasterScript]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.UICorner
+G2L["55"] = Instance.new("UICorner", G2L["49"]);
+G2L["55"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.TextLabel
+G2L["56"] = Instance.new("TextLabel", G2L["49"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextSize"] = 22;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["BackgroundTransparency"] = 1;
+G2L["56"]["Size"] = UDim2.new(0, 222, 0, 28);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Text"] = [[Tracers]];
+G2L["56"]["Position"] = UDim2.new(0.26985, 0, 0.13636, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ImageLabel
+G2L["57"] = Instance.new("ImageLabel", G2L["38"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["ImageColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["57"]["Image"] = [[rbxassetid://4581715784]];
+G2L["57"]["Size"] = UDim2.new(0, 448, 0, 3);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["BackgroundTransparency"] = 1;
+G2L["57"]["Position"] = UDim2.new(0, 0, 0.22377, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip
+G2L["58"] = Instance.new("Frame", G2L["38"]);
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["58"]["Size"] = UDim2.new(0, 448, 0, 39);
+G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Name"] = [[Noclip]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton
+G2L["59"] = Instance.new("Frame", G2L["58"]);
+G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["59"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["59"]["Size"] = UDim2.new(0.1396, 0, -0.81229, 0);
+G2L["59"]["Position"] = UDim2.new(0.01459, 40, 0.5, 0);
+G2L["59"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["59"]["Name"] = [[SwitchButton]];
+G2L["59"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar
+G2L["5a"] = Instance.new("Frame", G2L["59"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47);
+G2L["5a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["5a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["5a"]["Name"] = [[Bar]];
+G2L["5a"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.UICorner
+G2L["5b"] = Instance.new("UICorner", G2L["5a"]);
+G2L["5b"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle
+G2L["5c"] = Instance.new("Frame", G2L["5a"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["5c"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["5c"]["Size"] = UDim2.new(0.6, 0, 1, 0);
+G2L["5c"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["5c"]["Name"] = [[Circle]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.UIStroke
+G2L["5d"] = Instance.new("UIStroke", G2L["5c"]);
+G2L["5d"]["Transparency"] = 0.25;
+G2L["5d"]["Thickness"] = 2;
+G2L["5d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.UIStroke.UIGradient
+G2L["5e"] = Instance.new("UIGradient", G2L["5d"]);
+G2L["5e"]["Rotation"] = 90;
+G2L["5e"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(0.620, 1),NumberSequenceKeypoint.new(1.000, 0.69375)};
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.Button
+G2L["5f"] = Instance.new("ImageButton", G2L["5c"]);
+G2L["5f"]["BackgroundTransparency"] = 1;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["ZIndex"] = 2;
+G2L["5f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["5f"]["Name"] = [[Button]];
+G2L["5f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.Button.fly
+G2L["60"] = Instance.new("LocalScript", G2L["5f"]);
+G2L["60"]["Name"] = [[fly]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.Button.noclip
+G2L["61"] = Instance.new("LocalScript", G2L["5f"]);
+G2L["61"]["Name"] = [[noclip]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.UICorner
+G2L["62"] = Instance.new("UICorner", G2L["5c"]);
+G2L["62"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.UIAspectRatioConstraint
+G2L["63"] = Instance.new("UIAspectRatioConstraint", G2L["5a"]);
+G2L["63"]["AspectRatio"] = 2;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.MasterScript
+G2L["64"] = Instance.new("LocalScript", G2L["59"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["64"]["Sandboxed"] = true;
+G2L["64"]["Name"] = [[MasterScript]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.UICorner
+G2L["65"] = Instance.new("UICorner", G2L["58"]);
+G2L["65"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.TextLabel
+G2L["66"] = Instance.new("TextLabel", G2L["58"]);
+G2L["66"]["BorderSizePixel"] = 0;
+G2L["66"]["TextSize"] = 22;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["BackgroundTransparency"] = 1;
+G2L["66"]["Size"] = UDim2.new(0, 222, 0, 28);
+G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["Text"] = [[Noclip]];
+G2L["66"]["Position"] = UDim2.new(0.26985, 0, 0.13636, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly
+G2L["67"] = Instance.new("Frame", G2L["38"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["67"]["Size"] = UDim2.new(0, 448, 0, 39);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Name"] = [[Fly]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton
+G2L["68"] = Instance.new("Frame", G2L["67"]);
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["68"]["Size"] = UDim2.new(0.1396, 0, -0.81229, 0);
+G2L["68"]["Position"] = UDim2.new(0.01459, 40, 0.5, 0);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["68"]["Name"] = [[SwitchButton]];
+G2L["68"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar
+G2L["69"] = Instance.new("Frame", G2L["68"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(47, 47, 47);
+G2L["69"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["69"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["69"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["69"]["Name"] = [[Bar]];
+G2L["69"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.UICorner
+G2L["6a"] = Instance.new("UICorner", G2L["69"]);
+G2L["6a"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle
+G2L["6b"] = Instance.new("Frame", G2L["69"]);
+G2L["6b"]["BorderSizePixel"] = 0;
+G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(255, 62, 65);
+G2L["6b"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["6b"]["Size"] = UDim2.new(0.6, 0, 1, 0);
+G2L["6b"]["Position"] = UDim2.new(0, 0, 0.5, 0);
+G2L["6b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["6b"]["Name"] = [[Circle]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.UIStroke
+G2L["6c"] = Instance.new("UIStroke", G2L["6b"]);
+G2L["6c"]["Transparency"] = 0.25;
+G2L["6c"]["Thickness"] = 2;
+G2L["6c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.UIStroke.UIGradient
+G2L["6d"] = Instance.new("UIGradient", G2L["6c"]);
+G2L["6d"]["Rotation"] = 90;
+G2L["6d"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(0.620, 1),NumberSequenceKeypoint.new(1.000, 0.69375)};
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.Button
+G2L["6e"] = Instance.new("ImageButton", G2L["6b"]);
+G2L["6e"]["BackgroundTransparency"] = 1;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["ZIndex"] = 2;
+G2L["6e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["6e"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["6e"]["Name"] = [[Button]];
+G2L["6e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.Button.fly
+G2L["6f"] = Instance.new("LocalScript", G2L["6e"]);
+G2L["6f"]["Name"] = [[fly]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.UICorner
+G2L["70"] = Instance.new("UICorner", G2L["6b"]);
+G2L["70"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.UIAspectRatioConstraint
+G2L["71"] = Instance.new("UIAspectRatioConstraint", G2L["69"]);
+G2L["71"]["AspectRatio"] = 2;
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.MasterScript
+G2L["72"] = Instance.new("LocalScript", G2L["68"]);
+-- [ERROR] cannot convert Capabilities, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["72"]["Sandboxed"] = true;
+G2L["72"]["Name"] = [[MasterScript]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.UICorner
+G2L["73"] = Instance.new("UICorner", G2L["67"]);
+G2L["73"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.TextLabel
+G2L["74"] = Instance.new("TextLabel", G2L["67"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextSize"] = 22;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Size"] = UDim2.new(0, 222, 0, 28);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Text"] = [[Fly]];
+G2L["74"]["Position"] = UDim2.new(0.26985, 0, 0.13636, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed
+G2L["75"] = Instance.new("TextButton", G2L["38"]);
+G2L["75"]["TextWrapped"] = true;
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["TextSize"] = 21;
+G2L["75"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["75"]["ZIndex"] = 2;
+G2L["75"]["Size"] = UDim2.new(0, 221, 0, 31);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Text"] = [[Set Walkspeed]];
+G2L["75"]["Name"] = [[walk speed]];
+G2L["75"]["Position"] = UDim2.new(0, 0, 0.14454, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed.walkspeed
+G2L["76"] = Instance.new("LocalScript", G2L["75"]);
+G2L["76"]["Name"] = [[walkspeed]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed.TextBox
+G2L["77"] = Instance.new("TextBox", G2L["75"]);
+G2L["77"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["ZIndex"] = 2;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["TextSize"] = 21;
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["PlaceholderText"] = [[(Your Speed)]];
+G2L["77"]["Size"] = UDim2.new(0, 221, 0, 31);
+G2L["77"]["Position"] = UDim2.new(1.02334, 0, 0, 0);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed.TextBox.UICorner
+G2L["78"] = Instance.new("UICorner", G2L["77"]);
+G2L["78"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed.UICorner
+G2L["79"] = Instance.new("UICorner", G2L["75"]);
+G2L["79"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power
+G2L["7a"] = Instance.new("TextButton", G2L["38"]);
+G2L["7a"]["TextWrapped"] = true;
+G2L["7a"]["BorderSizePixel"] = 0;
+G2L["7a"]["TextSize"] = 21;
+G2L["7a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7a"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["7a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7a"]["ZIndex"] = 2;
+G2L["7a"]["Size"] = UDim2.new(0, 221, 0, 31);
+G2L["7a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7a"]["Text"] = [[Set JumpPower]];
+G2L["7a"]["Name"] = [[jump power]];
+G2L["7a"]["Position"] = UDim2.new(0, 0, 0.19807, 0);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power.jumppower
+G2L["7b"] = Instance.new("LocalScript", G2L["7a"]);
+G2L["7b"]["Name"] = [[jumppower]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power.TextBox
+G2L["7c"] = Instance.new("TextBox", G2L["7a"]);
+G2L["7c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["ZIndex"] = 2;
+G2L["7c"]["BorderSizePixel"] = 0;
+G2L["7c"]["TextWrapped"] = true;
+G2L["7c"]["TextSize"] = 21;
+G2L["7c"]["ShowNativeInput"] = false;
+G2L["7c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+G2L["7c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7c"]["PlaceholderText"] = [[(Your JumpPower)]];
+G2L["7c"]["Size"] = UDim2.new(0, 221, 0, 31);
+G2L["7c"]["Position"] = UDim2.new(1.02334, 0, 0, 0);
+G2L["7c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7c"]["Text"] = [[]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power.TextBox.UICorner
+G2L["7d"] = Instance.new("UICorner", G2L["7c"]);
+G2L["7d"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power.UICorner
+G2L["7e"] = Instance.new("UICorner", G2L["7a"]);
+G2L["7e"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.PageShown
+G2L["7f"] = Instance.new("BoolValue", G2L["37"]);
+G2L["7f"]["Name"] = [[PageShown]];
+
+
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.valuecheck
+G2L["80"] = Instance.new("LocalScript", G2L["37"]);
+G2L["80"]["Name"] = [[valuecheck]];
+
+
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.LocalScript
+local function C_8()
+local script = G2L["8"];
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		button.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_8);
+-- StarterGui.Solar Hub.MainFrame.TopBar.close.LocalScript
+local function C_b()
+local script = G2L["b"];
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		button.Parent.Parent.Parent:Destroy()
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.Solar Hub.MainFrame.Pages.logs.enablepage
+local function C_10()
+local script = G2L["10"];
+	local button = script.Parent
+	
+	-- Pages (ScrollingFrame)
+	local pages = button.Parent
+	while pages and pages.Name ~= "Pages" do
+		pages = pages.Parent
+	end
+	
+	if not pages then
+		warn("Pages not found above " .. button:GetFullName())
+		return
+	end
+	
+	-- Main frame: Pages' parent
+	local main = pages.Parent
+	if not main then
+		warn("Pages has no parent")
+		return
+	end
+	
+	local updatePage = main:FindFirstChild("UpdatePage")
+	if not updatePage then
+		warn("UpdatePage not found under " .. main:GetFullName())
+		return
+	end
+	
+	local flag = updatePage:FindFirstChild("PageShown")
+	if not flag then
+		warn("PageShown not found under " .. updatePage:GetFullName())
+		return
+	end
+	
+	local function activate()
+		for _, other in ipairs(main:GetDescendants()) do
+			if other:IsA("BoolValue") and other.Name == "PageShown" and other ~= flag then
+				other.Value = false
+			end
+		end
+		flag.Value = true
+		print("[UpdatePageButton] fired, PageShown = " .. tostring(flag.Value))
+	end
+	
+	button.Activated:Connect(activate)
+end;
+task.spawn(C_10);
+-- StarterGui.Solar Hub.MainFrame.Pages.universal.enablepage
+local function C_14()
+local script = G2L["14"];
+	local button = script.Parent
+	
+	-- Pages (ScrollingFrame)
+	local pages = button.Parent
+	while pages and pages.Name ~= "Pages" do
+		pages = pages.Parent
+	end
+	
+	if not pages then
+		warn("Pages not found above " .. button:GetFullName())
+		return
+	end
+	
+	-- Main frame: Pages' parent
+	local main = pages.Parent
+	if not main then
+		warn("Pages has no parent")
+		return
+	end
+	
+	local updatePage = main:FindFirstChild("UniversalPage")
+	if not updatePage then
+		warn("UpdatePage not found under " .. main:GetFullName())
+		return
+	end
+	
+	local flag = updatePage:FindFirstChild("PageShown")
+	if not flag then
+		warn("PageShown not found under " .. updatePage:GetFullName())
+		return
+	end
+	
+	local function activate()
+		for _, other in ipairs(main:GetDescendants()) do
+			if other:IsA("BoolValue") and other.Name == "PageShown" and other ~= flag then
+				other.Value = false
+			end
+		end
+		flag.Value = true
+		print("[UpdatePageButton] fired, PageShown = " .. tostring(flag.Value))
+	end
+	
+	button.Activated:Connect(activate)
+end;
+task.spawn(C_14);
+-- StarterGui.Solar Hub.MainFrame.Pages.MM2.enablepage
+local function C_19()
+local script = G2L["19"];
+	local button = script.Parent
+	
+	-- Pages (ScrollingFrame)
+	local pages = button.Parent
+	while pages and pages.Name ~= "Pages" do
+		pages = pages.Parent
+	end
+	
+	if not pages then
+		warn("Pages not found above " .. button:GetFullName())
+		return
+	end
+	
+	-- Main frame: Pages' parent
+	local main = pages.Parent
+	if not main then
+		warn("Pages has no parent")
+		return
+	end
+	
+	local updatePage = main:FindFirstChild("MM2Page")
+	if not updatePage then
+		warn("UpdatePage not found under " .. main:GetFullName())
+		return
+	end
+	
+	local flag = updatePage:FindFirstChild("PageShown")
+	if not flag then
+		warn("PageShown not found under " .. updatePage:GetFullName())
+		return
+	end
+	
+	local function activate()
+		for _, other in ipairs(main:GetDescendants()) do
+			if other:IsA("BoolValue") and other.Name == "PageShown" and other ~= flag then
+				other.Value = false
+			end
+		end
+		flag.Value = true
+		print("[UpdatePageButton] fired, PageShown = " .. tostring(flag.Value))
+	end
+	
+	button.Activated:Connect(activate)
+end;
+task.spawn(C_19);
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.You.LocalScript
+local function C_1f()
+local script = G2L["1f"];
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	local imageLabel = script.Parent
+	
+	local userId = player.UserId
+	
+	local imageUrl = Players:GetUserThumbnailAsync(
+		userId,
+		Enum.ThumbnailType.HeadShot,
+		Enum.ThumbnailSize.Size420x420
+	)
+	
+	imageLabel.Image = imageUrl
+end;
+task.spawn(C_1f);
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.You.TextLabel.LocalScript
+local function C_21()
+local script = G2L["21"];
+	local player = game.Players.LocalPlayer
+	local textLabel = script.Parent
+	
+	textLabel.Text = "Hey, " .. player.DisplayName
+end;
+task.spawn(C_21);
+-- StarterGui.Solar Hub.MainFrame.UpdatePage.valuecheck
+local function C_24()
+local script = G2L["24"];
+	local frame = script.Parent
+	local Button = frame:IsA("GuiButton") and frame or nil
+	
+	-- Search for the BoolValue in the frame, its parent, or the ScreenGui
+	local flag = frame:FindFirstChild("PageShown")
+		or frame.Parent:FindFirstChild("PageShown")
+		or (frame.Parent:FindFirstChildOfClass("ScreenGui") or frame):FindFirstChild("PageShown")
+	
+	local function apply(shown)
+		frame.Visible = shown
+		frame.Interactable = shown
+		if Button then
+			Button.Active = shown
+			Button.Selectable = shown
+			Button.Interactable = shown
+		else
+			frame.Active = shown
+		end
+	end
+	
+	if not flag then
+		warn("PageShown BoolValue not found for " .. frame:GetFullName())
+		return
+	end
+	
+	apply(flag.Value)
+	flag:GetPropertyChangedSignal("Value"):Connect(function()
+		apply(flag.Value)
+	end)
+end;
+task.spawn(C_24);
+-- StarterGui.Solar Hub.MainFrame.MM2Page.scroll.Murderer ESP.SwitchButton.MasterScript
+local function C_29()
+local script = G2L["29"];
+	local Configurations = { 
+		Animation = { 
+			Goals = { 
+				UnChecked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(255, 92, 92), AnchorPoint = Vector2.new(0, 0.5), Position = UDim2.fromScale(0, 0.5)} 
+				}; 
+				Checked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(56, 255, 102), AnchorPoint = Vector2.new(1, 0.5), Position = UDim2.fromScale(1, 0.5)} 
+				}; 
+			} 
+		}; 
+	
+		Defaults = { 
+			isChecked = false; 
+			CooldownTime = 2; -- Seconds 
+			inCooldown = false; 
+			AnimationSpeed = 0.25; -- Seconds 
+		} 
+	} 
+	
+	-- Services 
+	local TweenService = game:GetService("TweenService") 
+	
+	
+	-- Instance Variables 
+	local SwitchButton_Frame = if script.Parent.Name == "SwitchButton" then script.Parent else nil 
+	local Bar 
+	local Circle 
+	local Button 
+	
+	-- TweenInfo 
+	local SwitchAnimateInfo = TweenInfo.new(Configurations.Defaults.AnimationSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut) 
+	
+	if SwitchButton_Frame then 
+		Bar = SwitchButton_Frame:FindFirstChild("Bar") 
+		if Bar then 
+			Circle = Bar:FindFirstChild("Circle") 
+			if Circle then 
+				Button = Circle:FindFirstChild("Button") 
+				if Button then 
+					if Button:IsA("GuiButton") then 
+	
+						Button.MouseButton1Click:Connect(function() 
+							if Configurations.Defaults.inCooldown == false then 
+								Configurations.Defaults.inCooldown = true 
+	
+								Configurations.Defaults.isChecked = not Configurations.Defaults.isChecked 
+	
+								if Configurations.Defaults.isChecked == true then 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Enabled/Activated/Checked) 
+	
+	
+									--[[======================================]] 
+								else 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Disabled/Unactivated/Unchecked) 
+	
+	
+									--[[======================================]] 
+								end 
+	
+								task.wait(Configurations.Defaults.CooldownTime) 
+								Configurations.Defaults.inCooldown = false 
+							end 
+						end) 
+	
+					else 
+						warn("Button is not a GuiButton class.") 
+						return 
+					end 
+				else 
+					warn("Button not found.") 
+					return 
+				end 
+			else 
+				warn("Circle not found.") 
+				return 
+			end 
+		else 
+			warn("Bar not found.") 
+			return 
+		end 
+	else 
+		warn("SwitchButton frame not found as a parent.") 
+		return 
+	end
+end;
+task.spawn(C_29);
+-- StarterGui.Solar Hub.MainFrame.MM2Page.valuecheck
+local function C_36()
+local script = G2L["36"];
+	local frame = script.Parent
+	local Button = frame:IsA("GuiButton") and frame or nil
+	
+	-- Search for the BoolValue in the frame, its parent, or the ScreenGui
+	local flag = frame:FindFirstChild("PageShown")
+		or frame.Parent:FindFirstChild("PageShown")
+		or (frame.Parent:FindFirstChildOfClass("ScreenGui") or frame):FindFirstChild("PageShown")
+	
+	local function apply(shown)
+		frame.Visible = shown
+		frame.Interactable = shown
+		if Button then
+			Button.Active = shown
+			Button.Selectable = shown
+			Button.Interactable = shown
+		else
+			frame.Active = shown
+		end
+	end
+	
+	if not flag then
+		warn("PageShown BoolValue not found for " .. frame:GetFullName())
+		return
+	end
+	
+	apply(flag.Value)
+	flag:GetPropertyChangedSignal("Value"):Connect(function()
+		apply(flag.Value)
+	end)
+end;
+task.spawn(C_36);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.Bar.Circle.Button.esp
+local function C_43()
+local script = G2L["43"];
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local localPlayer = Players.LocalPlayer
+	local enabled = false
+	local espData = {}
+	local connections = {}
+	
+	local espColor = Color3.fromRGB(0, 143, 156)
+	
+	local screenGui = Instance.new("ScreenGui")
+	screenGui.Name = "ESP_2D"
+	screenGui.ResetOnSpawn = false
+	screenGui.Parent = localPlayer:WaitForChild("PlayerGui")
+	
+	------------------------------------------------
+	-- GET CHARACTER SCREEN BOUNDS
+	------------------------------------------------
+	local function getScreenRectFromParts(parts, camera)
+		local minX, minY = math.huge, math.huge
+		local maxX, maxY = -math.huge, -math.huge
+		local any = false
+	
+		for _, part in ipairs(parts) do
+			if part:IsA("BasePart") then
+				local cf = part.CFrame
+				local s = part.Size
+				local corners = {
+					cf * CFrame.new(-s.X/2, -s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new( s.X/2, -s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new(-s.X/2,  s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new( s.X/2,  s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new(-s.X/2, -s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new( s.X/2, -s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new(-s.X/2,  s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new( s.X/2,  s.Y/2,  s.Z/2).Position,
+				}
+				for _, p in ipairs(corners) do
+					local sp, vis = camera:WorldToScreenPoint(p)
+					if vis then
+						any = true
+						minX = math.min(minX, sp.X)
+						maxX = math.max(maxX, sp.X)
+						minY = math.min(minY, sp.Y)
+						maxY = math.max(maxY, sp.Y)
+					end
+				end
+			end
+		end
+	
+		if not any then return nil end
+		return minX, minY, maxX - minX, maxY - minY
+	end
+	
+	------------------------------------------------
+	-- CREATE FRAME + LABEL HELPERS
+	------------------------------------------------
+	local function getPlayerColor(player)
+		if player.Team and player.Team.TeamColor then
+			return player.Team.TeamColor.Color
+		end
+		return espColor
+	end
+	
+	local function createFrameLabel(color)
+		local frame = Instance.new("Frame")
+		frame.BackgroundTransparency = 1
+		frame.BorderSizePixel = 0
+		frame.Parent = screenGui
+	
+		local stroke = Instance.new("UIStroke")
+		stroke.Thickness = 2
+		stroke.Color = color
+		stroke.Parent = frame
+	
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(0, 200, 0, 20)
+		label.BackgroundTransparency = 1
+		label.TextSize = 15
+		label.Font = Enum.Font.Arimo
+		label.TextColor3 = Color3.new(1, 1, 1)
+		label.TextStrokeTransparency = 0
+		label.TextXAlignment = Enum.TextXAlignment.Center
+		label.Parent = screenGui
+	
+		return frame, label
+	end
+	
+	------------------------------------------------
+	-- PLAYER ESP
+	------------------------------------------------
+	local function createPlayerESP(player, character)
+		if espData[player] then return end
+	
+		local humanoid = character:WaitForChild("Humanoid")
+		local color = getPlayerColor(player)
+		local frame, label = createFrameLabel(color)
+	
+		local hpBarBg = Instance.new("Frame")
+		hpBarBg.BackgroundColor3 = Color3.new(255, 0, 0)
+		hpBarBg.BackgroundTransparency = 0
+		hpBarBg.BorderSizePixel = 0
+		hpBarBg.Parent = screenGui
+	
+		local hpBarFill = Instance.new("Frame")
+		hpBarFill.BackgroundColor3 = Color3.new(0.2, 1, 0.2)
+		hpBarFill.BorderSizePixel = 0
+		hpBarFill.Parent = hpBarBg
+	
+		espData[player] = {frame = frame, label = label, hpBarBg = hpBarBg, hpBarFill = hpBarFill}
+	
+		connections[player] = RunService.RenderStepped:Connect(function()
+			if not enabled then return end
+			if not character.Parent then return end
+	
+			local myChar = localPlayer.Character
+			if not myChar then return end
+	
+			local myRoot = myChar:FindFirstChild("HumanoidRootPart")
+			local targetRoot = character:FindFirstChild("HumanoidRootPart")
+	
+			local hp = humanoid and math.floor(humanoid.Health) or 0
+			local maxHp = humanoid and humanoid.MaxHealth or 100
+			local dist = 0
+			if myRoot and targetRoot then
+				dist = math.floor((myRoot.Position - targetRoot.Position).Magnitude)
+			end
+	
+			local camera = Workspace.CurrentCamera
+			if not camera then return end
+	
+			local parts = {}
+			for _, p in ipairs(character:GetChildren()) do
+				if p:IsA("BasePart") then table.insert(parts, p) end
+			end
+	
+			local x, y, w, h = getScreenRectFromParts(parts, camera)
+			if x then
+				local currentColor = getPlayerColor(player)
+				frame.UIStroke.Color = currentColor
+				frame.Visible = true
+				frame.Position = UDim2.new(0, x - 4, 0, y - 4)
+				frame.Size = UDim2.new(0, w + 8, 0, h + 8)
+	
+				label.Text = string.format("%s | HP: %d | %d studs", player.Name, hp, dist)
+				label.Position = UDim2.new(0, x, 0, y - 24)
+				label.Visible = true
+	
+				local barWidth = 12
+				local gap = 12
+				hpBarBg.Visible = true
+				hpBarBg.Position = UDim2.new(0, x - gap - barWidth, 0, y - 4)
+				hpBarBg.Size = UDim2.new(0, barWidth, 0, h + 8)
+	
+				local ratio = math.clamp(hp / maxHp, 0, 1)
+				hpBarFill.Size = UDim2.new(1, 0, 1 * ratio, 0)
+				hpBarFill.Position = UDim2.new(0, 0, 1 - 1 * ratio, 0)
+				hpBarFill.BackgroundColor3 = Color3.new(0.2, 1, 0.2)
+			else
+				frame.Visible = false
+				label.Visible = false
+				hpBarBg.Visible = false
+			end
+		end)
+	end
+	
+	------------------------------------------------
+	-- ITEM ESP
+	------------------------------------------------
+	local itemEspData = {}
+	local itemConnections = {}
+	
+	local function createItemESP(item)
+		if itemEspData[item] then return end
+	
+		local handle = item:FindFirstChild("Handle")
+		if not handle then return end
+	
+		local frame, label = createFrameLabel(espColor)
+	
+		itemEspData[item] = {frame = frame, label = label}
+	
+		itemConnections[item] = RunService.RenderStepped:Connect(function()
+			if not enabled then return end
+			if not item.Parent then return end
+	
+			local camera = Workspace.CurrentCamera
+			if not camera then return end
+	
+			local parts = {}
+			for _, p in ipairs(item:GetChildren()) do
+				if p:IsA("BasePart") then table.insert(parts, p) end
+			end
+	
+			local x, y, w, h = getScreenRectFromParts(parts, camera)
+			if x then
+				frame.Visible = true
+				frame.Position = UDim2.new(0, x - 4, 0, y - 4)
+				frame.Size = UDim2.new(0, w + 8, 0, h + 8)
+	
+				label.Text = item.Name
+				label.Position = UDim2.new(0, x, 0, y - 24)
+				label.Visible = true
+			else
+				frame.Visible = false
+				label.Visible = false
+			end
+		end)
+	end
+	
+	local function clearItemESP()
+		for _, data in pairs(itemEspData) do
+			if data.frame then data.frame:Destroy() end
+			if data.label then data.label:Destroy() end
+		end
+		for _, conn in pairs(itemConnections) do
+			if conn then conn:Disconnect() end
+		end
+		itemEspData = {}
+		itemConnections = {}
+	end
+	
+	local function scanItems()
+		for _, obj in ipairs(Workspace:GetChildren()) do
+			if obj:IsA("Tool") then
+				createItemESP(obj)
+			end
+		end
+	end
+	
+	------------------------------------------------
+	-- CLEAR ALL
+	------------------------------------------------
+	local function clearAll()
+		for _, data in pairs(espData) do
+			if data.frame then data.frame:Destroy() end
+			if data.label then data.label:Destroy() end
+			if data.hpBarBg then data.hpBarBg:Destroy() end
+		end
+		for _, conn in pairs(connections) do
+			if conn then conn:Disconnect() end
+		end
+		espData = {}
+		connections = {}
+	
+		clearItemESP()
+	end
+	
+	------------------------------------------------
+	-- PLAYER SETUP
+	------------------------------------------------
+	local function setupPlayer(player)
+		local function onCharacterAdded(char)
+			if espData[player] then
+				if espData[player].frame then espData[player].frame:Destroy() end
+				if espData[player].label then espData[player].label:Destroy() end
+				if espData[player].hpBarBg then espData[player].hpBarBg:Destroy() end
+				espData[player] = nil
+			end
+			if connections[player] then
+				connections[player]:Disconnect()
+				connections[player] = nil
+			end
+	
+			task.wait(0.5)
+			if enabled then createPlayerESP(player, char) end
+		end
+	
+		if player.Character then
+			onCharacterAdded(player.Character)
+		end
+	
+		player.CharacterAdded:Connect(onCharacterAdded)
+	end
+	
+	for _, p in ipairs(Players:GetPlayers()) do
+		setupPlayer(p)
+	end
+	
+	Players.PlayerAdded:Connect(setupPlayer)
+	
+	------------------------------------------------
+	-- ITEM DETECTION
+	------------------------------------------------
+	Workspace.DescendantAdded:Connect(function(obj)
+		if obj:IsA("Tool") then
+			obj.AncestryChanged:Wait()
+			task.wait(0.1)
+			if enabled and obj.Parent == Workspace then
+				createItemESP(obj)
+			end
+		end
+	end)
+	
+	------------------------------------------------
+	-- TOGGLE
+	------------------------------------------------
+	button.MouseButton1Click:Connect(function()
+		enabled = not enabled
+		if enabled then
+			for _, p in ipairs(Players:GetPlayers()) do
+				if p.Character then createPlayerESP(p, p.Character) end
+			end
+			scanItems()
+		else
+			clearAll()
+		end
+	end)
+end;
+task.spawn(C_43);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.ESP.SwitchButton.MasterScript
+local function C_46()
+local script = G2L["46"];
+	local Configurations = { 
+		Animation = { 
+			Goals = { 
+				UnChecked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(255, 61, 64), AnchorPoint = Vector2.new(0, 0.5), Position = UDim2.fromScale(0, 0.5)} 
+				}; 
+				Checked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(56, 255, 102), AnchorPoint = Vector2.new(1, 0.5), Position = UDim2.fromScale(1, 0.5)} 
+				}; 
+			} 
+		}; 
+	
+		Defaults = { 
+			isChecked = false; 
+			CooldownTime = 0; -- Seconds 
+			inCooldown = false; 
+			AnimationSpeed = 0.25; -- Seconds 
+		} 
+	} 
+	
+	-- Services 
+	local TweenService = game:GetService("TweenService") 
+	
+	
+	-- Instance Variables 
+	local SwitchButton_Frame = if script.Parent.Name == "SwitchButton" then script.Parent else nil 
+	local Bar 
+	local Circle 
+	local Button 
+	
+	-- TweenInfo 
+	local SwitchAnimateInfo = TweenInfo.new(Configurations.Defaults.AnimationSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut) 
+	
+	if SwitchButton_Frame then 
+		Bar = SwitchButton_Frame:FindFirstChild("Bar") 
+		if Bar then 
+			Circle = Bar:FindFirstChild("Circle") 
+			if Circle then 
+				Button = Circle:FindFirstChild("Button") 
+				if Button then 
+					if Button:IsA("GuiButton") then 
+	
+						Button.MouseButton1Click:Connect(function() 
+							if Configurations.Defaults.inCooldown == false then 
+								Configurations.Defaults.inCooldown = true 
+	
+								Configurations.Defaults.isChecked = not Configurations.Defaults.isChecked 
+	
+								if Configurations.Defaults.isChecked == true then 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Enabled/Activated/Checked) 
+	
+	
+									--[[======================================]] 
+								else 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Disabled/Unactivated/Unchecked) 
+	
+	
+									--[[======================================]] 
+								end 
+	
+								task.wait(Configurations.Defaults.CooldownTime) 
+								Configurations.Defaults.inCooldown = false 
+							end 
+						end) 
+	
+					else 
+						warn("Button is not a GuiButton class.") 
+						return 
+					end 
+				else 
+					warn("Button not found.") 
+					return 
+				end 
+			else 
+				warn("Circle not found.") 
+				return 
+			end 
+		else 
+			warn("Bar not found.") 
+			return 
+		end 
+	else 
+		warn("SwitchButton frame not found as a parent.") 
+		return 
+	end
+end;
+task.spawn(C_46);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.Bar.Circle.Button.esp
+local function C_51()
+local script = G2L["51"];
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	
+	local localPlayer = Players.LocalPlayer
+	local enabled = false
+	local espData = {}
+	local connections = {}
+	
+	local espColor = Color3.fromRGB(0, 143, 156)
+	
+	local screenGui = Instance.new("ScreenGui")
+	screenGui.Name = "ESP_2D"
+	screenGui.ResetOnSpawn = false
+	screenGui.Parent = localPlayer:WaitForChild("PlayerGui")
+	
+	------------------------------------------------
+	-- GET CHARACTER SCREEN BOUNDS
+	------------------------------------------------
+	local function getScreenRectFromParts(parts, camera)
+		local minX, minY = math.huge, math.huge
+		local maxX, maxY = -math.huge, -math.huge
+		local any = false
+	
+		for _, part in ipairs(parts) do
+			if part:IsA("BasePart") then
+				local cf = part.CFrame
+				local s = part.Size
+				local corners = {
+					cf * CFrame.new(-s.X/2, -s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new( s.X/2, -s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new(-s.X/2,  s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new( s.X/2,  s.Y/2, -s.Z/2).Position,
+					cf * CFrame.new(-s.X/2, -s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new( s.X/2, -s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new(-s.X/2,  s.Y/2,  s.Z/2).Position,
+					cf * CFrame.new( s.X/2,  s.Y/2,  s.Z/2).Position,
+				}
+				for _, p in ipairs(corners) do
+					local sp, vis = camera:WorldToScreenPoint(p)
+					if vis then
+						any = true
+						minX = math.min(minX, sp.X)
+						maxX = math.max(maxX, sp.X)
+						minY = math.min(minY, sp.Y)
+						maxY = math.max(maxY, sp.Y)
+					end
+				end
+			end
+		end
+	
+		if not any then return nil end
+		return minX, minY, maxX - minX, maxY - minY
+	end
+	
+	------------------------------------------------
+	-- CREATE FRAME + LABEL HELPERS
+	------------------------------------------------
+	local function getPlayerColor(player)
+		if player.Team and player.Team.TeamColor then
+			return player.Team.TeamColor.Color
+		end
+		return espColor
+	end
+	
+	local function createFrameLabel(color)
+		local frame = Instance.new("Frame")
+		frame.BackgroundTransparency = 1
+		frame.BorderSizePixel = 0
+		frame.Parent = screenGui
+	
+		local stroke = Instance.new("UIStroke")
+		stroke.Thickness = 2
+		stroke.Color = color
+		stroke.Parent = frame
+	
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(0, 200, 0, 20)
+		label.BackgroundTransparency = 1
+		label.TextSize = 15
+		label.Font = Enum.Font.Arimo
+		label.TextColor3 = Color3.new(1, 1, 1)
+		label.TextStrokeTransparency = 0
+		label.TextXAlignment = Enum.TextXAlignment.Center
+		label.Parent = screenGui
+	
+		return frame, label
+	end
+	
+	------------------------------------------------
+	-- PLAYER ESP
+	------------------------------------------------
+	local function createPlayerESP(player, character)
+		if espData[player] then return end
+	
+		local humanoid = character:WaitForChild("Humanoid")
+		local color = getPlayerColor(player)
+		local frame, label = createFrameLabel(color)
+	
+		local hpBarBg = Instance.new("Frame")
+		hpBarBg.BackgroundColor3 = Color3.new(255, 0, 0)
+		hpBarBg.BackgroundTransparency = 0
+		hpBarBg.BorderSizePixel = 0
+		hpBarBg.Parent = screenGui
+	
+		local hpBarFill = Instance.new("Frame")
+		hpBarFill.BackgroundColor3 = Color3.new(0.2, 1, 0.2)
+		hpBarFill.BorderSizePixel = 0
+		hpBarFill.Parent = hpBarBg
+	
+		espData[player] = {frame = frame, label = label, hpBarBg = hpBarBg, hpBarFill = hpBarFill}
+	
+		connections[player] = RunService.RenderStepped:Connect(function()
+			if not enabled then return end
+			if not character.Parent then return end
+	
+			local myChar = localPlayer.Character
+			if not myChar then return end
+	
+			local myRoot = myChar:FindFirstChild("HumanoidRootPart")
+			local targetRoot = character:FindFirstChild("HumanoidRootPart")
+	
+			local hp = humanoid and math.floor(humanoid.Health) or 0
+			local maxHp = humanoid and humanoid.MaxHealth or 100
+			local dist = 0
+			if myRoot and targetRoot then
+				dist = math.floor((myRoot.Position - targetRoot.Position).Magnitude)
+			end
+	
+			local camera = Workspace.CurrentCamera
+			if not camera then return end
+	
+			local parts = {}
+			for _, p in ipairs(character:GetChildren()) do
+				if p:IsA("BasePart") then table.insert(parts, p) end
+			end
+	
+			local x, y, w, h = getScreenRectFromParts(parts, camera)
+			if x then
+				local currentColor = getPlayerColor(player)
+				frame.UIStroke.Color = currentColor
+				frame.Visible = true
+				frame.Position = UDim2.new(0, x - 4, 0, y - 4)
+				frame.Size = UDim2.new(0, w + 8, 0, h + 8)
+	
+				label.Text = string.format("%s | HP: %d | %d studs", player.Name, hp, dist)
+				label.Position = UDim2.new(0, x, 0, y - 24)
+				label.Visible = true
+	
+				local barWidth = 12
+				local gap = 12
+				hpBarBg.Visible = true
+				hpBarBg.Position = UDim2.new(0, x - gap - barWidth, 0, y - 4)
+				hpBarBg.Size = UDim2.new(0, barWidth, 0, h + 8)
+	
+				local ratio = math.clamp(hp / maxHp, 0, 1)
+				hpBarFill.Size = UDim2.new(1, 0, 1 * ratio, 0)
+				hpBarFill.Position = UDim2.new(0, 0, 1 - 1 * ratio, 0)
+				hpBarFill.BackgroundColor3 = Color3.new(0.2, 1, 0.2)
+			else
+				frame.Visible = false
+				label.Visible = false
+				hpBarBg.Visible = false
+			end
+		end)
+	end
+	
+	------------------------------------------------
+	-- ITEM ESP
+	------------------------------------------------
+	local itemEspData = {}
+	local itemConnections = {}
+	
+	local function createItemESP(item)
+		if itemEspData[item] then return end
+	
+		local handle = item:FindFirstChild("Handle")
+		if not handle then return end
+	
+		local frame, label = createFrameLabel(espColor)
+	
+		itemEspData[item] = {frame = frame, label = label}
+	
+		itemConnections[item] = RunService.RenderStepped:Connect(function()
+			if not enabled then return end
+			if not item.Parent then return end
+	
+			local camera = Workspace.CurrentCamera
+			if not camera then return end
+	
+			local parts = {}
+			for _, p in ipairs(item:GetChildren()) do
+				if p:IsA("BasePart") then table.insert(parts, p) end
+			end
+	
+			local x, y, w, h = getScreenRectFromParts(parts, camera)
+			if x then
+				frame.Visible = true
+				frame.Position = UDim2.new(0, x - 4, 0, y - 4)
+				frame.Size = UDim2.new(0, w + 8, 0, h + 8)
+	
+				label.Text = item.Name
+				label.Position = UDim2.new(0, x, 0, y - 24)
+				label.Visible = true
+			else
+				frame.Visible = false
+				label.Visible = false
+			end
+		end)
+	end
+	
+	local function clearItemESP()
+		for _, data in pairs(itemEspData) do
+			if data.frame then data.frame:Destroy() end
+			if data.label then data.label:Destroy() end
+		end
+		for _, conn in pairs(itemConnections) do
+			if conn then conn:Disconnect() end
+		end
+		itemEspData = {}
+		itemConnections = {}
+	end
+	
+	local function scanItems()
+		for _, obj in ipairs(Workspace:GetChildren()) do
+			if obj:IsA("Tool") then
+				createItemESP(obj)
+			end
+		end
+	end
+	
+	------------------------------------------------
+	-- CLEAR ALL
+	------------------------------------------------
+	local function clearAll()
+		for _, data in pairs(espData) do
+			if data.frame then data.frame:Destroy() end
+			if data.label then data.label:Destroy() end
+			if data.hpBarBg then data.hpBarBg:Destroy() end
+		end
+		for _, conn in pairs(connections) do
+			if conn then conn:Disconnect() end
+		end
+		espData = {}
+		connections = {}
+	
+		clearItemESP()
+	end
+	
+	------------------------------------------------
+	-- PLAYER SETUP
+	------------------------------------------------
+	local function setupPlayer(player)
+		local function onCharacterAdded(char)
+			if espData[player] then
+				if espData[player].frame then espData[player].frame:Destroy() end
+				if espData[player].label then espData[player].label:Destroy() end
+				if espData[player].hpBarBg then espData[player].hpBarBg:Destroy() end
+				espData[player] = nil
+			end
+			if connections[player] then
+				connections[player]:Disconnect()
+				connections[player] = nil
+			end
+	
+			task.wait(0.5)
+			if enabled then createPlayerESP(player, char) end
+		end
+	
+		if player.Character then
+			onCharacterAdded(player.Character)
+		end
+	
+		player.CharacterAdded:Connect(onCharacterAdded)
+	end
+	
+	for _, p in ipairs(Players:GetPlayers()) do
+		setupPlayer(p)
+	end
+	
+	Players.PlayerAdded:Connect(setupPlayer)
+	
+	------------------------------------------------
+	-- ITEM DETECTION
+	------------------------------------------------
+	Workspace.DescendantAdded:Connect(function(obj)
+		if obj:IsA("Tool") then
+			obj.AncestryChanged:Wait()
+			task.wait(0.1)
+			if enabled and obj.Parent == Workspace then
+				createItemESP(obj)
+			end
+		end
+	end)
+	
+	------------------------------------------------
+	-- TOGGLE
+	------------------------------------------------
+	button.MouseButton1Click:Connect(function()
+		enabled = not enabled
+		if enabled then
+			for _, p in ipairs(Players:GetPlayers()) do
+				if p.Character then createPlayerESP(p, p.Character) end
+			end
+			scanItems()
+		else
+			clearAll()
+		end
+	end)
+end;
+task.spawn(C_51);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Tracers.SwitchButton.MasterScript
+local function C_54()
+local script = G2L["54"];
+	local Configurations = { 
+		Animation = { 
+			Goals = { 
+				UnChecked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(255, 61, 64), AnchorPoint = Vector2.new(0, 0.5), Position = UDim2.fromScale(0, 0.5)} 
+				}; 
+				Checked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(56, 255, 102), AnchorPoint = Vector2.new(1, 0.5), Position = UDim2.fromScale(1, 0.5)} 
+				}; 
+			} 
+		}; 
+	
+		Defaults = { 
+			isChecked = false; 
+			CooldownTime = 0; -- Seconds 
+			inCooldown = false; 
+			AnimationSpeed = 0.25; -- Seconds 
+		} 
+	} 
+	
+	-- Services 
+	local TweenService = game:GetService("TweenService") 
+	
+	
+	-- Instance Variables 
+	local SwitchButton_Frame = if script.Parent.Name == "SwitchButton" then script.Parent else nil 
+	local Bar 
+	local Circle 
+	local Button 
+	
+	-- TweenInfo 
+	local SwitchAnimateInfo = TweenInfo.new(Configurations.Defaults.AnimationSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut) 
+	
+	if SwitchButton_Frame then 
+		Bar = SwitchButton_Frame:FindFirstChild("Bar") 
+		if Bar then 
+			Circle = Bar:FindFirstChild("Circle") 
+			if Circle then 
+				Button = Circle:FindFirstChild("Button") 
+				if Button then 
+					if Button:IsA("GuiButton") then 
+	
+						Button.MouseButton1Click:Connect(function() 
+							if Configurations.Defaults.inCooldown == false then 
+								Configurations.Defaults.inCooldown = true 
+	
+								Configurations.Defaults.isChecked = not Configurations.Defaults.isChecked 
+	
+								if Configurations.Defaults.isChecked == true then 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Enabled/Activated/Checked) 
+	
+	
+									--[[======================================]] 
+								else 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Disabled/Unactivated/Unchecked) 
+	
+	
+									--[[======================================]] 
+								end 
+	
+								task.wait(Configurations.Defaults.CooldownTime) 
+								Configurations.Defaults.inCooldown = false 
+							end 
+						end) 
+	
+					else 
+						warn("Button is not a GuiButton class.") 
+						return 
+					end 
+				else 
+					warn("Button not found.") 
+					return 
+				end 
+			else 
+				warn("Circle not found.") 
+				return 
+			end 
+		else 
+			warn("Bar not found.") 
+			return 
+		end 
+	else 
+		warn("SwitchButton frame not found as a parent.") 
+		return 
+	end
+end;
+task.spawn(C_54);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.Button.fly
+local function C_60()
+local script = G2L["60"];
+	local Players = game:GetService("Players")
+	local UIS = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	
+	local flying = false
+	local speed = 60
+	
+	local bodyVelocity
+	local bodyGyro
+	local connection
+	
+	local function getCharacter()
+		return player.Character or player.CharacterAdded:Wait()
+	end
+	
+	local function startFly()
+		local char = getCharacter()
+		local hrp = char:WaitForChild("HumanoidRootPart")
+		local humanoid = char:WaitForChild("Humanoid")
+	
+		humanoid.PlatformStand = true
+	
+		bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.MaxForce = Vector3.new(1e9, 1e9, 1e9)
+		bodyVelocity.Velocity = Vector3.zero
+		bodyVelocity.Parent = hrp
+	
+		bodyGyro = Instance.new("BodyGyro")
+		bodyGyro.MaxTorque = Vector3.new(1e9, 1e9, 1e9)
+		bodyGyro.P = 5000
+		bodyGyro.CFrame = hrp.CFrame
+		bodyGyro.Parent = hrp
+	
+		connection = RunService.RenderStepped:Connect(function()
+			local cam = workspace.CurrentCamera
+			local move = Vector3.zero
+	
+			if UIS:IsKeyDown(Enum.KeyCode.W) then move += cam.CFrame.LookVector end
+			if UIS:IsKeyDown(Enum.KeyCode.S) then move -= cam.CFrame.LookVector end
+			if UIS:IsKeyDown(Enum.KeyCode.A) then move -= cam.CFrame.RightVector end
+			if UIS:IsKeyDown(Enum.KeyCode.D) then move += cam.CFrame.RightVector end
+			if UIS:IsKeyDown(Enum.KeyCode.Space) then move += Vector3.new(0,1,0) end
+			if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then move -= Vector3.new(0,1,0) end
+	
+			if move.Magnitude > 0 then
+				bodyVelocity.Velocity = move.Unit * speed
+			else
+				bodyVelocity.Velocity = Vector3.zero
+			end
+	
+			bodyGyro.CFrame = cam.CFrame
+		end)
+	end
+	
+	local function stopFly()
+		local char = getCharacter()
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+	
+		if connection then connection:Disconnect() end
+		if bodyVelocity then bodyVelocity:Destroy() end
+		if bodyGyro then bodyGyro:Destroy() end
+	
+		if humanoid then
+			humanoid.PlatformStand = false
+		end
+	end
+	
+	local function toggleFly()
+		flying = not flying
+	
+		if flying then
+			startFly()
+		else
+			stopFly()
+		end
+	end
+	
+	-- KEYBIND (L)
+	UIS.InputBegan:Connect(function(input, gp)
+		if gp then return end
+		if input.KeyCode == Enum.KeyCode.L then
+			toggleFly()
+		end
+	end)
+	
+	-- OPTIONAL: BUTTON SUPPORT
+	local function connectButton(button)
+		button.MouseButton1Click:Connect(function()
+			toggleFly()
+		end)
+	end
+	
+	-- If script is inside a button, auto-bind it
+	if script.Parent:IsA("GuiButton") then
+		connectButton(script.Parent)
+	end
+end;
+task.spawn(C_60);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.Bar.Circle.Button.noclip
+local function C_61()
+local script = G2L["61"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UIS = game:GetService("UserInputService")
+	
+	local player = Players.LocalPlayer
+	
+	local noclip = false
+	local connection
+	local originalCollision = {}
+	
+	local function saveCollisionState(char)
+		originalCollision = {}
+		for _, part in ipairs(char:GetDescendants()) do
+			if part:IsA("BasePart") then
+				originalCollision[part] = part.CanCollide
+			end
+		end
+	end
+	
+	local function setCharacterCollision(char, state)
+		for _, part in ipairs(char:GetDescendants()) do
+			if part:IsA("BasePart") then
+				part.CanCollide = state
+			end
+		end
+	end
+	
+	local function restoreCollision(char)
+		for part, state in pairs(originalCollision) do
+			if part and part.Parent then
+				part.CanCollide = state
+			end
+		end
+	end
+	
+	local function startNoclip(char)
+		saveCollisionState(char)
+		setCharacterCollision(char, false)
+	
+		connection = RunService.Stepped:Connect(function()
+			if player.Character then
+				setCharacterCollision(player.Character, false)
+			end
+		end)
+	end
+	
+	local function stopNoclip(char)
+		if connection then
+			connection:Disconnect()
+			connection = nil
+		end
+		restoreCollision(char)
+	end
+	
+	local function toggle()
+		noclip = not noclip
+		local char = player.Character
+		if not char then return end
+	
+		if noclip then
+			startNoclip(char)
+		else
+			stopNoclip(char)
+		end
+	end
+	
+	-- Button support
+	if script.Parent:IsA("GuiButton") then
+		script.Parent.MouseButton1Click:Connect(toggle)
+	end
+	
+	-- KEYBIND (C)
+	UIS.InputBegan:Connect(function(input, gp)
+		if gp then return end
+		if input.KeyCode == Enum.KeyCode.C then
+			toggle()
+		end
+	end)
+	
+	-- Fix on respawn
+	player.CharacterAdded:Connect(function(char)
+		task.wait(0.5)
+		if noclip then
+			startNoclip(char)
+		end
+	end)
+end;
+task.spawn(C_61);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Noclip.SwitchButton.MasterScript
+local function C_64()
+local script = G2L["64"];
+	local Configurations = { 
+		Animation = { 
+			Goals = { 
+				UnChecked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(255, 61, 64), AnchorPoint = Vector2.new(0, 0.5), Position = UDim2.fromScale(0, 0.5)} 
+				}; 
+				Checked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(56, 255, 102), AnchorPoint = Vector2.new(1, 0.5), Position = UDim2.fromScale(1, 0.5)} 
+				}; 
+			} 
+		}; 
+	
+		Defaults = { 
+			isChecked = false; 
+			CooldownTime = 0; -- Seconds 
+			inCooldown = false; 
+			AnimationSpeed = 0.25; -- Seconds 
+		} 
+	} 
+	
+	-- Services 
+	local TweenService = game:GetService("TweenService") 
+	
+	
+	-- Instance Variables 
+	local SwitchButton_Frame = if script.Parent.Name == "SwitchButton" then script.Parent else nil 
+	local Bar 
+	local Circle 
+	local Button 
+	
+	-- TweenInfo 
+	local SwitchAnimateInfo = TweenInfo.new(Configurations.Defaults.AnimationSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut) 
+	
+	if SwitchButton_Frame then 
+		Bar = SwitchButton_Frame:FindFirstChild("Bar") 
+		if Bar then 
+			Circle = Bar:FindFirstChild("Circle") 
+			if Circle then 
+				Button = Circle:FindFirstChild("Button") 
+				if Button then 
+					if Button:IsA("GuiButton") then 
+	
+						Button.MouseButton1Click:Connect(function() 
+							if Configurations.Defaults.inCooldown == false then 
+								Configurations.Defaults.inCooldown = true 
+	
+								Configurations.Defaults.isChecked = not Configurations.Defaults.isChecked 
+	
+								if Configurations.Defaults.isChecked == true then 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Enabled/Activated/Checked) 
+	
+	
+									--[[======================================]] 
+								else 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Disabled/Unactivated/Unchecked) 
+	
+	
+									--[[======================================]] 
+								end 
+	
+								task.wait(Configurations.Defaults.CooldownTime) 
+								Configurations.Defaults.inCooldown = false 
+							end 
+						end) 
+	
+					else 
+						warn("Button is not a GuiButton class.") 
+						return 
+					end 
+				else 
+					warn("Button not found.") 
+					return 
+				end 
+			else 
+				warn("Circle not found.") 
+				return 
+			end 
+		else 
+			warn("Bar not found.") 
+			return 
+		end 
+	else 
+		warn("SwitchButton frame not found as a parent.") 
+		return 
+	end
+end;
+task.spawn(C_64);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.Bar.Circle.Button.fly
+local function C_6f()
+local script = G2L["6f"];
+	local Players = game:GetService("Players")
+	local UIS = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	
+	local flying = false
+	local speed = 60
+	
+	local bodyVelocity
+	local bodyGyro
+	local connection
+	
+	local function getCharacter()
+		return player.Character or player.CharacterAdded:Wait()
+	end
+	
+	local function startFly()
+		local char = getCharacter()
+		local hrp = char:WaitForChild("HumanoidRootPart")
+		local humanoid = char:WaitForChild("Humanoid")
+	
+		humanoid.PlatformStand = true
+	
+		bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.MaxForce = Vector3.new(1e9, 1e9, 1e9)
+		bodyVelocity.Velocity = Vector3.zero
+		bodyVelocity.Parent = hrp
+	
+		bodyGyro = Instance.new("BodyGyro")
+		bodyGyro.MaxTorque = Vector3.new(1e9, 1e9, 1e9)
+		bodyGyro.P = 5000
+		bodyGyro.CFrame = hrp.CFrame
+		bodyGyro.Parent = hrp
+	
+		connection = RunService.RenderStepped:Connect(function()
+			local cam = workspace.CurrentCamera
+			local move = Vector3.zero
+	
+			if UIS:IsKeyDown(Enum.KeyCode.W) then move += cam.CFrame.LookVector end
+			if UIS:IsKeyDown(Enum.KeyCode.S) then move -= cam.CFrame.LookVector end
+			if UIS:IsKeyDown(Enum.KeyCode.A) then move -= cam.CFrame.RightVector end
+			if UIS:IsKeyDown(Enum.KeyCode.D) then move += cam.CFrame.RightVector end
+			if UIS:IsKeyDown(Enum.KeyCode.Space) then move += Vector3.new(0,1,0) end
+			if UIS:IsKeyDown(Enum.KeyCode.LeftShift) then move -= Vector3.new(0,1,0) end
+	
+			if move.Magnitude > 0 then
+				bodyVelocity.Velocity = move.Unit * speed
+			else
+				bodyVelocity.Velocity = Vector3.zero
+			end
+	
+			bodyGyro.CFrame = cam.CFrame
+		end)
+	end
+	
+	local function stopFly()
+		local char = getCharacter()
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+	
+		if connection then connection:Disconnect() end
+		if bodyVelocity then bodyVelocity:Destroy() end
+		if bodyGyro then bodyGyro:Destroy() end
+	
+		if humanoid then
+			humanoid.PlatformStand = false
+		end
+	end
+	
+	local function toggleFly()
+		flying = not flying
+	
+		if flying then
+			startFly()
+		else
+			stopFly()
+		end
+	end
+	
+	-- KEYBIND (L)
+	UIS.InputBegan:Connect(function(input, gp)
+		if gp then return end
+		if input.KeyCode == Enum.KeyCode.L then
+			toggleFly()
+		end
+	end)
+	
+	-- OPTIONAL: BUTTON SUPPORT
+	local function connectButton(button)
+		button.MouseButton1Click:Connect(function()
+			toggleFly()
+		end)
+	end
+	
+	-- If script is inside a button, auto-bind it
+	if script.Parent:IsA("GuiButton") then
+		connectButton(script.Parent)
+	end
+end;
+task.spawn(C_6f);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.Fly.SwitchButton.MasterScript
+local function C_72()
+local script = G2L["72"];
+	local Configurations = { 
+		Animation = { 
+			Goals = { 
+				UnChecked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(255, 61, 64), AnchorPoint = Vector2.new(0, 0.5), Position = UDim2.fromScale(0, 0.5)} 
+				}; 
+				Checked = { 
+					Bar = {BackgroundColor3 = Color3.fromRGB(46, 46, 46)}; 
+					Circle = {BackgroundColor3 = Color3.fromRGB(56, 255, 102), AnchorPoint = Vector2.new(1, 0.5), Position = UDim2.fromScale(1, 0.5)} 
+				}; 
+			} 
+		}; 
+	
+		Defaults = { 
+			isChecked = false; 
+			CooldownTime = 0; -- Seconds 
+			inCooldown = false; 
+			AnimationSpeed = 0.25; -- Seconds 
+		} 
+	} 
+	
+	-- Services 
+	local TweenService = game:GetService("TweenService") 
+	
+	
+	-- Instance Variables 
+	local SwitchButton_Frame = if script.Parent.Name == "SwitchButton" then script.Parent else nil 
+	local Bar 
+	local Circle 
+	local Button 
+	
+	-- TweenInfo 
+	local SwitchAnimateInfo = TweenInfo.new(Configurations.Defaults.AnimationSpeed, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut) 
+	
+	if SwitchButton_Frame then 
+		Bar = SwitchButton_Frame:FindFirstChild("Bar") 
+		if Bar then 
+			Circle = Bar:FindFirstChild("Circle") 
+			if Circle then 
+				Button = Circle:FindFirstChild("Button") 
+				if Button then 
+					if Button:IsA("GuiButton") then 
+	
+						Button.MouseButton1Click:Connect(function() 
+							if Configurations.Defaults.inCooldown == false then 
+								Configurations.Defaults.inCooldown = true 
+	
+								Configurations.Defaults.isChecked = not Configurations.Defaults.isChecked 
+	
+								if Configurations.Defaults.isChecked == true then 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.Checked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Enabled/Activated/Checked) 
+	
+	
+									--[[======================================]] 
+								else 
+									TweenService:Create(Bar, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Bar):Play() 
+									TweenService:Create(Circle, SwitchAnimateInfo, Configurations.Animation.Goals.UnChecked.Circle):Play() 
+	
+									--[[======================================]] 
+									-- Add your logic here (if Disabled/Unactivated/Unchecked) 
+	
+	
+									--[[======================================]] 
+								end 
+	
+								task.wait(Configurations.Defaults.CooldownTime) 
+								Configurations.Defaults.inCooldown = false 
+							end 
+						end) 
+	
+					else 
+						warn("Button is not a GuiButton class.") 
+						return 
+					end 
+				else 
+					warn("Button not found.") 
+					return 
+				end 
+			else 
+				warn("Circle not found.") 
+				return 
+			end 
+		else 
+			warn("Bar not found.") 
+			return 
+		end 
+	else 
+		warn("SwitchButton frame not found as a parent.") 
+		return 
+	end
+end;
+task.spawn(C_72);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.walk speed.walkspeed
+local function C_76()
+local script = G2L["76"];
+	local button = script.Parent
+	local textBox = button:WaitForChild("TextBox")
+	
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local running = false
+	
+	local function getHumanoid()
+		local character = player.Character or player.CharacterAdded:Wait()
+		return character:WaitForChild("Humanoid")
+	end
+	
+	local function startLoop(value)
+		running = true
+	
+		task.spawn(function()
+			while running do
+				local humanoid = getHumanoid()
+				humanoid.WalkSpeed = value
+				task.wait(0.1)
+			end
+		end)
+	end
+	
+	local function stopLoop()
+		running = false
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		local value = tonumber(textBox.Text)
+		if not value then return end
+	
+		if running then
+			stopLoop()
+		else
+			startLoop(value)
+		end
+	end)
+	
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		if running then
+			local value = tonumber(textBox.Text)
+			if value then
+				startLoop(value)
+			end
+		end
+	end)
+end;
+task.spawn(C_76);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.scroll.jump power.jumppower
+local function C_7b()
+local script = G2L["7b"];
+	local button = script.Parent
+	local textBox = button:WaitForChild("TextBox")
+	
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local running = false
+	
+	local function getHumanoid()
+		local character = player.Character or player.CharacterAdded:Wait()
+		return character:WaitForChild("Humanoid")
+	end
+	
+	local function startLoop(value)
+		running = true
+	
+		task.spawn(function()
+			while running do
+				local humanoid = getHumanoid()
+				humanoid.UseJumpPower = true
+				humanoid.JumpPower = value
+				task.wait(0.1)
+			end
+		end)
+	end
+	
+	local function stopLoop()
+		running = false
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		local value = tonumber(textBox.Text)
+		if not value then return end
+	
+		if running then
+			stopLoop()
+		else
+			startLoop(value)
+		end
+	end)
+	
+	player.CharacterAdded:Connect(function()
+		task.wait(0.5)
+		if running then
+			local value = tonumber(textBox.Text)
+			if value then
+				startLoop(value)
+			end
+		end
+	end)
+end;
+task.spawn(C_7b);
+-- StarterGui.Solar Hub.MainFrame.UniversalPage.valuecheck
+local function C_80()
+local script = G2L["80"];
+	local frame = script.Parent
+	local Button = frame:IsA("GuiButton") and frame or nil
+	
+	-- Search for the BoolValue in the frame, its parent, or the ScreenGui
+	local flag = frame:FindFirstChild("PageShown")
+		or frame.Parent:FindFirstChild("PageShown")
+		or (frame.Parent:FindFirstChildOfClass("ScreenGui") or frame):FindFirstChild("PageShown")
+	
+	local function apply(shown)
+		frame.Visible = shown
+		frame.Interactable = shown
+		if Button then
+			Button.Active = shown
+			Button.Selectable = shown
+			Button.Interactable = shown
+		else
+			frame.Active = shown
+		end
+	end
+	
+	if not flag then
+		warn("PageShown BoolValue not found for " .. frame:GetFullName())
+		return
+	end
+	
+	apply(flag.Value)
+	flag:GetPropertyChangedSignal("Value"):Connect(function()
+		apply(flag.Value)
+	end)
+end;
+task.spawn(C_80);
+
+return G2L["1"], require;
